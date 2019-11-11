@@ -4,18 +4,17 @@
   <h1 style="text-align: center;"> <strong> CALCULADORA</strong> </h1>
   <hr>
   <br>
-  <br>
 </div>
 
 <div class="container shadow-lg p-3 mb-5 bg-white rounded" style=" max-width: 20%;">
   <div>
     <hr>
     <button class="" style="background-color: white; border: none; margin-left: 90%;" data-toggle="modal"
-      data-target="#exampleModal">
+      data-target="#exampleModalScrollable">
       <i-feather name="book"></i-feather>
     </button>
-    <textarea [(ngModel)]="operacion" name="" style="width: 100%; border: none; background-color: white;"
-      disabled></textarea>
+    <textarea class="font-weight-bold " [(ngModel)]="operacion" name=""
+      style="width: 100%;  background-color: white; font-size: 30px; text-align: right;" disabled></textarea>
 
 
     <!-- <input type="text" style="height: 100%; width: 100%; border: none; font-size: 20px;"> -->
@@ -23,183 +22,188 @@
   </div>
   <div class="row">
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn "
-        (click)="valor('Deg')"><strong>
+      <button type="button" style="width: 100%; height: 100%; font-size: 20px;" class="btn "
+        (click)="valor('deg(')"><strong>
           Deg </strong> </button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn "
+      <button type="button" style="width: 100%; height: 100%; font-size: 20px;" class="btn "
         (click)="valor(0)"><strong>No</strong>
       </button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor('pi')">
+      <button type="button" style="width: 100%; height: 100%; font-size: 20px;" class="btn " (click)="valor('pi')">
         <strong>π</strong></button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor('e')">
+      <button type="button" style="width: 100%; height: 100%; font-size: 20px;" class="btn " (click)="valor('e')">
         <strong>e</strong></button>
     </div>
   </div>
   <div class="row">
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor('Sin')">
+      <button type="button" style="width: 100%; height: 100%; font-size: 20px;" class="btn " (click)="valor('sin(')">
         <strong>Sin</strong>
       </button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor('Cos')">
+      <button type="button" style="width: 100%; height: 100%; font-size: 20px;" class="btn " (click)="valor('cos(')">
         <strong>Cos</strong>
       </button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor('Tan')">
+      <button type="button" style="width: 100%; height: 100%; font-size: 20px;" class="btn " (click)="valor('tan(')">
         <strong>Tan</strong></button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor(0)">
+      <button type="button" style="width: 100%; height: 100%; font-size: 20px;" class="btn " (click)="valor(0)">
         <strong>n!</strong></button>
     </div>
   </div>
   <div class="row">
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor('Log')">
+      <button type="button" style="width: 100%; height: 100%; font-size: 20px;" class="btn " (click)="valor('log2(')">
         <strong>Log</strong></button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor('In')">
+      <button type="button" style="width: 100%; height: 100%; font-size: 20px;" class="btn " (click)="valor('ln(')">
         <strong>In</strong></button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor('^')">
+      <button type="button" style="width: 100%; height: 100%; font-size: 20px;" class="btn " (click)="valor('^')">
         <strong>^</strong></button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor('√')">
+      <button type="button" style="width: 100%; height: 100%; font-size: 20px;" class="btn " (click)="valor('sqrt(')">
         <strong>√</strong></button>
     </div>
   </div>
 
   <div class="row">
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn" (click)="clearAll()">
+      <button type="button" style="width: 100%; height: 100%; font-size: 28px;" class="btn" (click)="clearAll()">
         <strong>
           AC</strong>
       </button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="clear()"> <strong>
+      <button type="button" style="width: 100%; height: 100%; font-size: 28px;" class="btn " (click)="clear()"> <strong>
           ← </strong>
       </button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor('%')">
+      <button type="button" style="width: 100%; height: 100%; font-size: 20px;" class="btn " (click)="valor('%')">
         <strong>%</strong></button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor('/')">
+      <button type="button" style="width: 100%; height: 100%; font-size: 35px;" class="btn " (click)="valor('/')">
         <strong>÷</strong></button>
     </div>
   </div>
   <div class="row">
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor(7)">
+      <button type="button" style="width: 100%; height: 100%; font-size: 35px;" class="btn " (click)="valor(7)">
         <strong>7</strong></button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor(8)">
+      <button type="button" style="width: 100%; height: 100%; font-size: 35px;" class="btn " (click)="valor(8)">
         <strong>8</strong></button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor(9)">
+      <button type="button" style="width: 100%; height: 100%; font-size: 35px;" class="btn " (click)="valor(9)">
         <strong>9</strong></button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor('*')">
-        <strong>x</strong></button>
+      <button type="button" style="width: 100%; height: 100%; font-size: 35px;" class="btn " (click)="valor('*')">
+        <strong>*</strong></button>
     </div>
   </div>
   <div class="row">
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor(4)">
+      <button type="button" style="width: 100%; height: 100%; font-size: 35px;" class="btn " (click)="valor(4)">
         <strong>4</strong></button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor(5)">
+      <button type="button" style="width: 100%; height: 100%; font-size: 35px;" class="btn " (click)="valor(5)">
         <strong>5</strong></button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor(6)">
+      <button type="button" style="width: 100%; height: 100%; font-size: 35px;" class="btn " (click)="valor(6)">
         <strong>6</strong></button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor('-')">
+      <button type="button" style="width: 100%; height: 100%; font-size: 35px;" class="btn " (click)="valor('-')">
         <strong>-</strong></button>
     </div>
   </div>
   <div class="row">
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor(1)">
+      <button type="button" style="width: 100%; height: 100%; font-size: 35px;" class="btn " (click)="valor(1)">
         <strong>1</strong></button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor(2)">
+      <button type="button" style="width: 100%; height: 100%; font-size: 35px;" class="btn " (click)="valor(2)">
         <strong>2</strong></button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor(3)">
+      <button type="button" style="width: 100%; height: 100%; font-size: 35px;" class="btn " (click)="valor(3)">
         <strong>3</strong></button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor('+')">
+      <button type="button" style="width: 100%; height: 100%; font-size: 35px;" class="btn " (click)="valor('+')">
         <strong>+</strong></button>
     </div>
   </div>
   <div class="row">
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor('.')">
+      <button type="button" style="width: 100%; height: 100%; font-size: 20px;" class="btn " (click)="valor('.')">
         <strong>.
         </strong></button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor(0)">
+      <button type="button" style="width: 100%; height: 100%; font-size: 35px;" class="btn " (click)="valor(0)">
         <strong>0</strong></button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor('(')">
+      <button type="button" style="width: 100%; height: 100%; font-size: 20px;" class="btn " (click)="valor('(')">
         <strong>(</strong></button>
     </div>
     <div class="col-sm">
-      <button type="button" style="width: 100%; height: 100%; font-size: 25px;" class="btn " (click)="valor(')')">
+      <button type="button" style="width: 100%; height: 100%; font-size: 20px;" class="btn " (click)="valor(')')">
         <strong>)</strong></button>
     </div>
 
   </div>
 
   <div class="text-center">
-    <button type="button" style="width: 50%; height: 50%;" class="btn btn-warning">
+    <button type="button" style="width: 50%; height: 50%;" class="btn btn-warning" (click)="calculate()">
       <strong>=</strong></button>
   </div>
 
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog" role="document">
+<div class="modal fade bd-example-modal-sm" id="exampleModalScrollable" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h4 class="modal-title" id="exampleModalScrollableTitle"> <strong>HISTORIAL </strong> </h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <div *ngFor="let item of historial" style="text-align: right;">
+          <hr>
+          <p style="line-height: 8px; font-size: 12px;"> <strong>{{ item.fecha | date: 'yyyy-MM-dd' }} </strong> </p>
+          <p style="line-height: 8px; font-size: 16px"> {{ item.expresion }} </p>
+          <p style="line-height: 8px; font-size: 16px"> {{ item.resultado }} </p>
+          <hr>
+        </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        <strong>© Bonnie&Clyde </strong>
       </div>
     </div>
   </div>
