@@ -8,24 +8,24 @@ import { CalculadoraService } from './calculadora.service'
 })
 export class AppComponent implements OnInit {
   operacion: any;
-  historial: any;
+  historial: any[] = [];
   constructor(private apiService: CalculadoraService) { }
 
   ngOnInit() {
     this.operacion = '';
 
     this.apiService.getAllHistorial().subscribe(
-      data => {
+      (data: any[]) => {
         this.historial = data;
-        console.log(this.historial);
+
       }
     );
   }
 
   valor(key: any) {
-    // this.valorActual = key;
+
     this.operacion = this.operacion + key;
-    //console.log(this.valorActual + '  ' + this.operacion.length);
+
 
   }
 
@@ -39,18 +39,17 @@ export class AppComponent implements OnInit {
 
   calculate() {
 
-    this.apiService.calculate(this.operacion.toString()).subscribe(
-      data => {
-        this.operacion = data;
+    this.apiService.calculate(this.operacion.toString()).toPromise().then(
+      (data: any) => {
+        console.log(data);
 
-        this.apiService.getAllHistorial().subscribe(
-          data => {
-            this.historial = data;
-            console.log(this.historial);
-          }
-        );
+        this.operacion = data.resultado;
+
+        this.historial.push(data);
 
       }
     );
   }
+
+
 }
